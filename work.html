@@ -1,0 +1,50 @@
+<!doctype HTML>
+<html>
+	<head>
+		<script type="text/javascript" src="work_list.json"></script>
+		<link rel="stylesheet" href="work.css">
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+		<meta charset="utf-8">
+		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	</head>
+	<body>
+		<a id="back_btn" class="mdc-icon-button" href="index.html"><img src="assets/baseline-arrow_back-24px.svg"></a>
+		<div id="data">
+			<div id="right">
+				<p id="title"></p>
+				<div id="break" />
+				<p id="overline"></p>
+				<p id="prop"></p>
+				</br>
+			</div>
+			<p id="desc"></p>
+		</div>
+		<ul class="mdc-image-list mdc-image-list--masonry">
+		</ul>
+		<script>
+			const iconRipple = new mdc.ripple.MDCRipple(document.querySelector(".mdc-icon-button"));
+			iconRipple.unbounded = true;
+		
+			function getParameterByName( name ){
+			    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+			    var regexS = "[\\?&]"+name+"=([^&#]*)";
+			    var regex = new RegExp( regexS );
+			    var results = regex.exec( window.location.href );
+			    if( results == null )
+				  return "";
+			    else
+				  return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			var data = JSON.parse(JSON.stringify(list));
+			var obj = data[getParameterByName('work')];
+			document.getElementById("title").innerHTML = obj.work_name;
+			document.getElementById("overline").innerHTML = obj.work_overline;
+			document.getElementById("prop").innerHTML = "YEAR: " + obj.work_year + "</br> MEDIUM: " + obj.work_medium + "</br> DIMENSIONS: " + obj.work_dim;
+			document.getElementById("desc").innerHTML = obj.work_desc;
+			var image_list = document.querySelector(".mdc-image-list");
+			for(i = 1; i <= obj.work_imgno; i++){
+				image_list.innerHTML += "<li class=\"mdc-image-list__item\"><img class=\"mdc-image-list__image\" src=\"assets/" + obj.work_images + "/" + i + "_" + obj.work_images + ".jpg\"></li>";
+			}
+		</script>
+	</body>
+</html>

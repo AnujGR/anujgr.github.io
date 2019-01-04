@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+@import "@material/image-list/mdc-image-list.scss";
+@font-face {
+	font-family: "KayakSans-Bold";
+	src: url('https://anima-uploads.s3.amazonaws.com/5c1dc8e25f60e9000b4495ae/5c1dc9105f60e9000975d3ac/5c1dc913ade6e5000969c6a7/fonts/Kayak Sans Bold.otf') format("opentype");
+}
+@font-face {
+	font-family: "KayakSans-Light";
+	src: url('https://anima-uploads.s3.amazonaws.com/5c1dc8e25f60e9000b4495ae/5c1dc9105f60e9000975d3ac/5c1dc913ade6e5000969c6a7/fonts/Kayak Sans Light.otf') format("opentype");
+}
+#right{
+	width:30vw;
+	position:absolute;
+	top:10vh;
+	left:12vw;
+	text-align:right;
+	word-wrap:break-word;
+}
+.mdc-image-list{
+	@include mdc-image-list-masonry-columns(2,0px);
+	max-width:70vw;
+	position:relative;
+	width:45vw;
+	left:20vw;
+	top:8.5vh;
+	margin-bottom:10vh;
+}
+#title{
+	font-family:'KayakSans-Bold';
+	font-size:40px;
+}
+#overline{
+	font-family:'Space Mono';
+	font-weight:600;
+}
+#prop{
+	font-family:'Space Mono';
+	font-weight:600;
+}
+#desc{
+	font-family:"Roboto";
+	position:absolute;
+	left:9vw;
+	width:70%;
+	margin-bottom:10vh;
+}
