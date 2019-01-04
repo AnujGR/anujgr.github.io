@@ -16,7 +16,7 @@
 	<body style="margin:0px;padding:0px;">
 	<div style="width:100%;">
 		<div style="text-align:right;background-color:rgba(0, 0, 0, 0);width:25vw;margin:0px;padding:0px;display:table-cell;">
-			<img src="assets/identity.svg" id="logo"></img>
+			<img src="assets/Identity.svg" id="logo"></img>
 			<div id="name">ANMOL</br>GOVINDA</br>RAO</div>
 			<div id="break"></div>
 			<div class="menu mdc-ripple-surface" id="works" onclick="select(0);"> 
@@ -52,16 +52,7 @@
 			</div>
 		</div>
 		<script>
-			var copy = new ClipboardJS(document.getElementById("email"));
-		
-			const queries = document.querySelectorAll('.mdc-ripple-surface');
-			for(i = 0; i < queries.length; i++)
-				mdc.ripple.MDCRipple.attachTo(queries[i]);
-				
-			const snackbar = new mdc.snackbar.MDCSnackbar(document.querySelector(".mdc-snackbar"));
-			snackbar.labelText = "Copied to clipboard";
-			snackbar.actionButtonText = "CLOSE";
-			
+			var copy = new ClipboardJS(document.getElementById("email"));			
 			var works = document.getElementById("works");
 			var aboutme = document.getElementById("aboutme");
 			var btns = [works, aboutme];
