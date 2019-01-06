@@ -11,11 +11,23 @@
 			.mdc-snackbar {  
 				background-color: #212121;
 			}
+			
+			@material screen and (max-width:640px){
+				#notif_txt{
+					display:inline !important;
+				}
+				#selection{
+					display:none;
+				}
+				#display{
+					display:none;
+				}
+			}
 		</style>
 	</head>
 	<body style="margin:0px;padding:0px;">
-	<div style="width:100%;">
-		<div style="text-align:right;background-color:rgba(0, 0, 0, 0);width:25vw;margin:0px;padding:0px;display:table-cell;">
+		<p id="notif_txt" style="display:none">Please use a laptop/desktop to view this page.</p>
+		<div id = "selection" style="text-align:right;background-color:rgba(0, 0, 0, 0);width:320px;margin:0px;padding:0px;position:fixed;display:table-cell;">
 			<img src="assets/identity.svg" id="logo"></img>
 			<div id="name">ANMOL</br>GOVINDA</br>RAO</div>
 			<div id="break"></div>
@@ -37,9 +49,8 @@
 			</a>
 		</div>
 		<div id = "display" style="background-color:rgba(0, 0, 0, 0);display:table-cell;">
-			<table id = "work_table" style = "font-size:54px;font-family:KayakSans-Light;position:relative;bottom:5vh;left:6vw">
+			<table id = "work_table" style = "font-size:54px;font-family:KayakSans-Light;position:relative;top:52px;left:400px">
 			</table>
-		</div>
 		</div>
 		
 		<div class="mdc-snackbar"
