@@ -194,6 +194,10 @@
   font-family: "KayakSans-Light";
   src: url("https://anima-uploads.s3.amazonaws.com/5c1dc8e25f60e9000b4495ae/5c1dc9105f60e9000975d3ac/5c1dc913ade6e5000969c6a7/fonts/Kayak Sans Light.otf") format("opentype");
 }
+#notif-text {
+  font-family: "KayakSans-Bold";
+}
+
 .menu {
   -webkit-user-select: none;
   -khtml-user-select: none;
