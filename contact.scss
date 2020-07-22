@@ -1,7 +1,0 @@
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
-@import url('https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css');
-@import "@material/textfield/mdc-text-field";
-
-#message-input{
-	@include mdc-text-field-textarea-fill-color(rgb(0, 0, 0, 0.07));
-}
